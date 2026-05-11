@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes dealIn {
+  from { opacity: 0; transform: scale(0.7) rotate(-6deg); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 0 transparent; }
+  50% { box-shadow: 0 0 16px rgba(34, 197, 94, 0.27); }
+}
+@keyframes pulseTurn {
+  0%, 100% { box-shadow: 0 0 0 rgba(34, 197, 94, 0); }
+  50% { box-shadow: 0 0 14px rgba(34, 197, 94, 0.4); }
+}
+@keyframes blink {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-thumb { background: #1e3a2e; }
+
+body {
+  margin: 0;
+  background: #080e0b;
+  font-family: Georgia, serif;
+}
+
+.animate-fadeUp { animation: fadeUp 0.3s ease; }
+.animate-dealIn { animation: dealIn 0.3s ease both; }
+.animate-glow { animation: glow 1.2s infinite; }
+.animate-pulseTurn { animation: pulseTurn 1.4s ease infinite; }
+.animate-blink { animation: blink 0.9s ease infinite; }
